@@ -13,6 +13,11 @@ const theme = createTheme({
       dark: "pink",
       light: "cyan",
     }),
+    Kittipong: virtualColor({
+      name: "Kittipong",
+      dark: "yellow",
+      light: "blue",
+    }),
   },
 });
 

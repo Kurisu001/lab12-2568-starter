@@ -111,14 +111,19 @@ export default function HomePage() {
                       Due: {task.dueDate.toLocaleDateString()}
                     </Text>
                   )}
-                  {/* แสดง Date & Time */}
-                  <Text size="xs" c="gray">
-                    Done at:
+                  {/* แสดง Date & Time */
+                  (
+                  <Text size="xs"
+                   c="Kittipong"
+                   display={task.isDone? "":" none"}
+                   >
+                    Done at: {new Date().toLocaleString()}
                   </Text>
+                  )}
                 </Stack>
                 {/* แสดง Button Done & Button Delete */}
                 <Group>
-                  <Button
+                  {/* <Button
                     style={{
                       backgroundColor: "#71c32fda",
                       color: "#dce6e7ff",
@@ -128,15 +133,32 @@ export default function HomePage() {
                     onClick={() => toggleDoneTask(task.id)}
                   >
                     Done
-                  </Button>
-                  <Button
+                  </Button> */}
+                  <Checkbox
+                    color="lime.4"
+                    iconColor="dark.8"
+                    size="md"
+                    label="Done"
+                    onClick={() => toggleDoneTask(task.id)}
+                  />
+                  {/* <Button
                     color="chanadda"
                     variant="light"
                     size="xs"
                     onClick={() => deleteTask(task.id)}
                   >
                     Delete
-                  </Button>
+                  </Button> */}
+                  <ActionIcon
+                    variant="light"
+                    color="red"
+                    onClick={() => deleteTask(task.id)}
+                  >
+                    <IconTrash
+                      style={{ width: "70%", height: "70%" }}
+                      stroke={1.5}
+                    />
+                  </ActionIcon>
                 </Group>
               </Group>
             </Card>
