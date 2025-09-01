@@ -8,10 +8,10 @@ import {
   Text,
   Group,
 } from "@mantine/core";
-interface SidebarComponentProps {
-  userName: string;
-  type?: "admin" | "student";
-}
+// interface SidebarComponentProps {
+//   userName: string;
+//   type?: "admin" | "student";
+// }
 // export type { SidebarProps };
 export default function Sidebar() {
   return (
