@@ -55,7 +55,7 @@ export default function Sidebar() {
             <Avatar
               size="45px"
               radius="xl"
-              src="./public/Profile.jpg"
+              src="../public/Profile.png"
             />
           </Indicator>
           <Text>User : Kittipong : Admin</Text>
